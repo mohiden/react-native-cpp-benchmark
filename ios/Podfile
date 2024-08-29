@@ -17,6 +17,7 @@ end
 target 'RNLazerInput' do
   config = use_native_modules!
 
+  pod 'DoubleConversion', :path => '../node_modules/react-native/third-party/DoubleConversion'
   use_react_native!(
     :path => config[:reactNativePath],
     # An absolute path to your application root.
