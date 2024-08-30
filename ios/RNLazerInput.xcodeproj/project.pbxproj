@@ -539,6 +539,7 @@
 					"\"$(PODS_ROOT)/boost\"",
 					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
 					"\"$(PODS_ROOT)/../cpp\"",
+					"\"$(SRCROOT)/../node_modules/react-native/third-party/\"",
 				);
 				INFOPLIST_FILE = RNLazerInput/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -635,6 +636,7 @@
 					"\"$(PODS_ROOT)/boost\"",
 					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
 					"\"$(PODS_ROOT)/../cpp\"",
+					"\"$(SRCROOT)/../node_modules/react-native/third-party/\"",
 				);
 				INFOPLIST_FILE = RNLazerInput/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

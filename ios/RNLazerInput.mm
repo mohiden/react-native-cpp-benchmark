@@ -1,16 +1,31 @@
 #import "RNLazerInput.h"
-#import "../cpp/RNLazerInput.cpp"  // Ensure correct path and file extension
-
-extern "C" int add(int a, int b);
+#import "../cpp/RNLazerInput.cpp"
 
 @implementation RNLazerInput
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(add:(int)a b:(int)b resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
-    int result = add(a, b);
-    resolve(@(result));
+RCT_EXPORT_METHOD(quicksort
+                  : (NSArray<NSNumber *> *)array resolver
+                  : (RCTPromiseResolveBlock)resolve rejecter
+                  : (RCTPromiseRejectBlock)reject) {
+  int length = (int)[array count];
+  int *intArray = (int *)malloc(length * sizeof(int));
+
+  for (int i = 0; i < length; ++i) {
+    intArray[i] = [array[i] intValue];
+  }
+
+  quicksort(intArray, 0, length - 1);
+
+  NSMutableArray *sortedArray = [NSMutableArray arrayWithCapacity:length];
+  for (int i = 0; i < length; ++i) {
+    [sortedArray addObject:@(intArray[i])];
+  }
+
+  free(intArray);
+
+  resolve(@{ @"sortedArray" : sortedArray });
 }
 
 @end
-
