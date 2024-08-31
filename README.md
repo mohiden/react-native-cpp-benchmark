@@ -1,6 +1,6 @@
-# RNLazerInput
+# react-native-c++-benchmark
 
-RNLazerInput is an ongoing project to build a high-performance, native text input component for React Native using C++. Our goal is to provide a smoother and more responsive text input experience on both Android and iOS platforms.
+In this repository, I have implemented a quicksort algorithm in C++ and benchmarked it against a JavaScript quicksort algorithm. To perform the benchmarking, the C++ function is executed within a React Native app.
 
 ## Features
 - **High Performance**: Leveraging C++ for low-level, optimized text handling.
